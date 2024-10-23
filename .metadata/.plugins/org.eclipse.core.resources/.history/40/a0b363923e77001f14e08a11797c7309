@@ -1,0 +1,20 @@
+package comandos;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class main {
+	 public static void main(String[] args) throws IOException, InterruptedException {
+		ProcessBuilder builder = new ProcessBuilder("ping", "google.com");
+		Process process = builder.start();
+        BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
+
+        String line;
+        while ((line = reader.readLine()) != null) {
+            System.out.println(line); // Imprimir la salida del ping
+        }
+        int exitCode = process.waitFor(); // Esperar a que el proceso termine
+        System.out.println("Exit Code: " + exitCode);
+	}
+}

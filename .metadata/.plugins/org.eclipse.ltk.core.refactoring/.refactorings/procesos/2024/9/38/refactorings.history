@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Extract method &apos;public static void listarDirectorio() throws IOException &apos; from &apos;comandos.main.main(...)&apos; to &apos;comandos.main&apos;&#x0A;- Original project: &apos;procesos&apos;&#x0A;- Method name: &apos;listarDirectorio&apos;&#x0A;- Destination type: &apos;comandos.main&apos;&#x0A;- Declared visibility: &apos;public&apos;" comments="false" description="Extract method &apos;listarDirectorio&apos;" destination="0" exceptions="false" flags="786434" id="org.eclipse.jdt.ui.extract.method" input="/practica1comandos&lt;comandos{main.java" name="listarDirectorio" replace="false" selection="239 364" stamp="1726832948500" version="1.0" visibility="1"/>
+</session>

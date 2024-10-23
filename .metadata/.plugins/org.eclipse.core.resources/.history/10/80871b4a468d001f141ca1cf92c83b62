@@ -1,0 +1,10 @@
+package aumentarContador;
+
+public class Main2 {
+	public static void main(String[] args) {
+		
+			new Thread(new Hilo()).start();
+			new Thread(new Hilo()).start();
+		
+	}
+}

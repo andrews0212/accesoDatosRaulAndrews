@@ -1,0 +1,15 @@
+package aumentarContador;
+
+public class Hilo implements Runnable{
+public static int contador=0;
+
+	@Override
+	public void run() {
+		while(Hilo.contador<100) {
+		aumentarContador();
+		}
+	}
+	public synchronized void aumentarContador() {
+		contador=contador++;
+	}
+}

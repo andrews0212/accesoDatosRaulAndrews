@@ -1,0 +1,17 @@
+package carrera;
+
+import java.util.ArrayList;
+import java.util.concurrent.CountDownLatch;
+
+import corredor.Corredor;
+
+public class Carrera {
+	private CountDownLatch espera;
+	public Carrera(int nCorredores) {
+		espera = new  CountDownLatch(1);
+		for (int i = 0; i < nCorredores; i++) {
+			new Thread(new Corredor(i,espera)).start();
+		}
+		espera.countDown();
+	}
+}

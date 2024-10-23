@@ -1,0 +1,26 @@
+package corredor;
+
+import java.util.concurrent.CountDownLatch;
+
+public class Corredor implements Runnable {
+	private int dorsal;
+	private Double tiempo;
+	private CountDownLatch espera;
+	public Corredor(int dorsal, CountDownLatch espera) {
+		this.dorsal = dorsal;
+		this.espera = espera;
+	}
+	@Override
+	public void run() {
+		try {
+			espera.await();
+			tiempo= 9 + Math.random()*2;
+			System.out.println("El dorsal "+dorsal+" ha tardado "+tiempo+" segundos");
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+
+}

@@ -1,0 +1,18 @@
+package aumentarContador;
+
+public class Main2 {
+	public static void main(String[] args) {
+		Thread a = new Thread(new Hilo(1));
+		Thread b = new Thread(new Hilo(2));
+		a.start();
+		b.start();
+		try {
+			a.join();
+			b.join();
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+}
